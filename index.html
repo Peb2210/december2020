@@ -8,7 +8,7 @@
 <body>
 	<div>
 		<h1>
-		личный сайт воспитателя Синицыной Ф.ф.
+		личный сайт воспитателя Синицыной Ф.Ф.
 	</h1>
 	<p> Здесь вы найдете много полезных материалов,новостей и многое другое</p>
 	</div>
@@ -39,7 +39,66 @@
 		<p>моё жизненное кредо</p>
 	</div>
 	<div>
-		<p>форма обратной связи</p>
+		<h2>Хотите задать вопрос?</h2>
+		<p>Заполните форму обратной связи</p>
+		<form action="#"method="post" enctype="multipart/form-data">
+			<!--* используем метод пост чтобы можно было отправлять оллшие файлы в не гет
+			 второй параметр важно писать для корретктного передачи input - file-->
+			 <div>
+			 	<p>Введите имя</p>
+			 <input tabindex="1" placeholder="Введите имя" type="text" name="username" value=""/>
+			</div>
+			<p>Введите телефон</p>
+			<div>
+				 <input tabindex="2" placeholder= "+7(XXX)XXX-XX-XX" type="tel" name="userphone" value=""/>
+			</div>
+			<div>
+				<!--<input type="text" name="usermessage" value="">-->
+				<p>Введите вопрос</p>
+				<textarea tabindex="3" placeholder="Ваше сообщение" name="usertext"></textarea>
+			</div>
+			<div>
+					<p>введите пароль</p>
+				 <input tabindex="4" type="password" name="userpass" value=""/>
+			</div>
+		
+			<div>
+				<input tabindex="5" type="checkbox" name="catalog" valur="yes"/>Получить каталог-вопросник	
+				<!--отметка по умолчанию - checked. Нельзя изменить \выбрать - desabled-->			
+			</div>
+			<div>
+				<p>Выберите тип вопросника</p>
+				<div>
+					<input tabindex="6" checked type="radio" name="profpeople" value="teacher"/>Для учителя
+				</div>
+				<div>
+					<input tabindex="6" type="radio" name="profpeople" value="parents">Для родителя
+				</div>
+				<div>
+					<input tabindex="6" type="radio" name="profpeople" value="child"/>Для ученика
+				</div>
+		   </div>
+		   <div>
+		   	<p>Прикрепите файл</p>
+		   	<input tabindex="7" type="file" name="filename"/>
+		   </div>
+		   <!--выыпадающий список с возможностью выбора нескольтких жлеметров списка заваи ктрл-->
+		   <br/>
+		   <div>
+		   	<select tabindex= "8" multiple="" name="listkatalog" id="">
+		   		<option selected value="par">Родитель</option>
+		   		<option value="tech">Учитель</option>
+		   		<option value="children">Ученик</option>
+		   	</select>
+		   </div>
+		   <br/>
+		   <div>
+		   	<button tabindex="9" type='submit'>Отправить заявку</button>
+		   	<button tabindex="10" type='reset'>Очистить форму</button>
+
+		   </div>
+		</form>
+
 	</div>
 
 </body>
