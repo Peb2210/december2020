@@ -1,0 +1,56 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+/* обнулякм все отступы и границы*/
+
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*меняет подсчет ширины блока более удобно для верстки*/
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+/*убираем линии обводки*/
+
+
+nav,footer,header,aside{display: block;}
+/*делаем эти части блочными*/
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+/*уравнивается поведение шрифтов и раззмеров
+в том числе самовольное увеличение шрифта в айфне*/
+
+input,button,textarea{font-family:inherit;}
+/*включаем наследование семейства шрифта для тегов form*/
+
+input::-ms-clear{display: none;}
+/*убирает крестик а интернет эксплоре*/
+
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+/*уирает лишние отступы для кнопок в firefox*/
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+/*убмраем стили маркированных списков*/
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*обнуяем все заголовки h*/
+/*--------------------*/
+
