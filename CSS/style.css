@@ -46,7 +46,8 @@ button::-moz-focus-inner {padding:0;border:0;}
 /*уирает лишние отступы для кнопок в firefox*/
 a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
-ul li{list-style: none;}
+ul, li{list-style: none;}
+
 /*убмраем стили маркированных списков*/
 img{vertical-align: top;}
 
@@ -54,3 +55,54 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*обнуяем все заголовки h*/
 /*--------------------*/
 
+body {
+	font-family: Helvetica, sans-serif;
+	color: black;
+}
+ul,li{
+	display: block;
+}
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+/*____ header___*/
+
+.header{
+	background: #91919a;
+	color: #3232d0;
+	padding-top:30px;
+	padding-bottom: 30px;
+}
+.header a{
+	color: #fff;
+}
+.nav {
+	display: flex;
+	align-items: center;
+}
+.menu {
+	display: flex;
+}
+
+.tel {
+	font-size: 17px;
+	margin-left: auto;
+	letter-spacing: 0.1em;}
+
+.logo{
+	margin-right: 40px;
+	width: 50px;
+	height: 50px;
+}
+.menu li{
+	margin-right: 10px;
+}
+.menu li a{
+	font-size: 20px;
+	color: #3232d0;
+}
+.menu li a:hover {
+	border-bottom: 1px solid #3232d0;
+}
+/*____close header___*/
