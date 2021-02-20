@@ -71,8 +71,8 @@ ul,li{
 .header{
    background: #91919a;
 	color: #3232d0;
-	padding-top:30px;
-	padding-bottom: 30px;
+	padding-top:20px;
+	padding-bottom: 20px;
 }
 .header a{
 	color: #fff;
@@ -112,11 +112,12 @@ ul,li{
 	background: url('../IMG/header-bg-light.jpg') no-repeat center top/cover;
 	/*opacity: 0.7;работает на всю страницу - поэтому меняем картинку в фригме
 	со свщйством 60% fill*/
-	padding-top: 200px;
+	padding-top: 120px;
 	padding-bottom: 300px;
+	/*position: absolute;*/
 }
 .h1-main h1{
-	font-size: 80px;
+	font-size: 70px;
 	text-align: center;
 	color: #211ba2;
 	font-weight: 700;
@@ -126,6 +127,27 @@ ul,li{
 .h1-main p{
 	font-size: 30px;
 	text-align: center;
-	color: #fff;
+	color: #4646a2;
 	font-weight: 600;
+}
+.btn {
+	display: block;
+	/*размещаем по центру контейнера*/
+	position: relative;
+	left: 50%;
+   transform: translate(-50%, 0);
+
+	font-size: 17px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	padding: 17px 47px;
+	/*border: 1px solid #ff0000;
+	border-radius: 15px;*/
+	width: 300px;
+	transition: all 0.5s ease;/*плавность анимации при наведении*/
+	margin-top: 40px;
+	background: red;
+	box-shadow: 5px 5px 10px #8a0909;
+	font-weight: 500;
+	color: white;
 }
