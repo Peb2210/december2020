@@ -58,7 +58,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
 body {
-	font-family: Helvetica, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: black;
 }
 ul,li{
@@ -94,7 +94,8 @@ ul,li{
 .tel {
 	font-size: 17px;
 	margin-left: auto;
-	letter-spacing: 0.1em;}
+	/*letter-spacing: 0.1em;*/
+	}
 
 .logo{
 	margin-right: 40px;
@@ -103,12 +104,14 @@ ul,li{
 }
 /*это вариант размещения кружков
 через позиц онирование
-.menu li{
-	margin-right: 10px;
+.menu li{	
 	position: relative;
 	margin-right: 20px;
 }
 */
+.menu li{
+	margin-right: 10px;
+}
 .menu li a{
 	font-size: 17px;
 	color: #3232d0;
@@ -117,15 +120,12 @@ ul,li{
 	content:'*';
 }кроме первого*/
 
-menu li:not(:last-child)::after{
+.menu li:not(:last-child)::after{
 	content: '';
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
 	background-color: red;
-	position: absolute;
-	top: 5px;
-	left: 10px;
 	display: inline-block;
 	margin: 0px 0px 5px 10px;
 	}
