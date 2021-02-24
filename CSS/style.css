@@ -56,6 +56,30 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*обнуяем все заголовки h*/
 /*--------------------*/
+/*подключаем шрифты меняя путь к нашей папке с шрифтами
+скачтваем нужные редкие шрифты потом их конвертируем*/
+@font-face {
+  font-family: 'pfdintextcondpro-bold';
+  src: url(../FONTS/pfdintextcondpro-bold.eot);
+  src: url(../FONTS/pfdintextcondpro-bold.eot?#iefix) format('embedded-opentype'),
+       url(../FONTS/pfdintextcondpro-bold.otf) format('otf'),
+       url(../FONTS/pfdintextcondpro-bold.svg#pfdintextcondpro-bold) format('svg'),
+       url(../FONTS/pfdintextcondpro-bold.ttf) format('truetype'),
+       url(../FONTS/pfdintextcondpro-bold.woff2) format('woff2'),
+       url(../FONTS/pfdintextcondpro-bold.woff) format('woff');
+
+}
+@font-face {
+  font-family: 'pfdintextcondpro-light';
+  src: url(../FONTS/pfdintextcondpro-light.eot);
+  src: url(../FONTS/pfdintextcondpro-light.eot?#iefix) format('embedded-opentype'),
+       url(../FONTS/pfdintextcondpro-light.otf) format('otf'),
+       url(../FONTS/pfdintextcondpro-light.svg#pfdintextcondpro-light) format('svg'),
+       url(../FONTS/pfdintextcondpro-light.ttf) format('truetype'),
+       url(../FONTS/pfdintextcondpro-light.woff) format('woff'),
+       url(../FONTS/pfdintextcondpro-light.woff2) format('woff2');
+}
+
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -156,6 +180,9 @@ ul,li{
 	/*position: absolute;*/
 }
 .h1-main h1{
+	font-family: 'pfdintextcondpro-bold';
+	/*подключила другой шрифвт именно для этого
+	заголовка*/
 	font-size: 70px;
 	text-align: center;
 	color: #211ba2;
