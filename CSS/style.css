@@ -39,7 +39,8 @@ input,button,textarea{font-family:inherit;}
 /*включаем наследование семейства шрифта для тегов form*/
 
 input::-ms-clear{display: none;}
-/*убирает крестик а интернет эксплоре*/
+/*убирает крестик а интернет эксплоре в поле input
+специфика именно Интернет-Эксплоера*/
 
 button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
@@ -79,10 +80,14 @@ ul,li{
 }
 .nav {
  	display: flex;
+ 	flex-wrap: wrap;
+ 	/* обязательно этот параметр чтобы был 
+ 	правильный перенос и размещение элеметов*/
 	align-items: center;
 }
 .menu {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .tel {
@@ -98,9 +103,24 @@ ul,li{
 .menu li{
 	margin-right: 10px;
 }
+
 .menu li a{
-	font-size: 20px;
+	font-size: 17px;
 	color: #3232d0;
+}
+/*.menu li:not(:nth-child(1)):after{
+	content:'*';
+}кроме первого*/
+
+.menu li:not(:last-child)::after{
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: red;
+	display: inline-block;
+	margin: 0px 0px 5px 10px;
+
 }
 .menu li a:hover {
 	border-bottom: 1px solid #3232d0;
@@ -113,7 +133,7 @@ ul,li{
 	/*opacity: 0.7;работает на всю страницу - поэтому меняем картинку в фригме
 	со свщйством 60% fill*/
 	padding-top: 120px;
-	padding-bottom: 300px;
+	padding-bottom: 200px;
 	/*position: absolute;*/
 }
 .h1-main h1{
