@@ -39,12 +39,13 @@ input,button,textarea{font-family:inherit;}
 /*включаем наследование семейства шрифта для тегов form*/
 
 input::-ms-clear{display: none;}
-/*убирает крестик а интернет эксплоре в поле input
+/*!!!убирает крестик а интернет эксплоре в поле input
 специфика именно Интернет-Эксплоера*/
 
 button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
-/*уирает лишние отступы для кнопок в firefox*/
+/*!!!убирает лишние отступы для кнопок в firefox*/
+
 a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
 ul, li{list-style: none;}
@@ -100,10 +101,14 @@ ul,li{
 	width: 50px;
 	height: 50px;
 }
+/*это вариант размещения кружков
+через позиц онирование
 .menu li{
 	margin-right: 10px;
+	position: relative;
+	margin-right: 20px;
 }
-
+*/
 .menu li a{
 	font-size: 17px;
 	color: #3232d0;
@@ -112,16 +117,30 @@ ul,li{
 	content:'*';
 }кроме первого*/
 
-.menu li:not(:last-child)::after{
+menu li:not(:last-child)::after{
 	content: '';
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
 	background-color: red;
+	position: absolute;
+	top: 5px;
+	left: 10px;
 	display: inline-block;
 	margin: 0px 0px 5px 10px;
-
-}
+	}
+/*размезщение кружков через позиционирование
+.menu li:not(:first-child)::before{
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: red;
+	position: absolute;
+	top: 5px;
+	left: -10px;
+	}
+	*/
 .menu li a:hover {
 	border-bottom: 1px solid #3232d0;
 }
