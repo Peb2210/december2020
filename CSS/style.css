@@ -233,20 +233,28 @@ ul,li{
 	/*margin: 0px -15px;*/
 }
 .about__body{
-	padding: 0px 0px 0px 20px;
-		/*margin: 0px -15px;*/
+	flex: 1 1 auto;
+	padding: 0px 0px 0px 30px;
+	/*align-self: center; блок с текстом тогда
+	по центру блока с картинкой*/
+	/*отступ слева 20px*/
 }
-.about__img{
-	/*padding : 0px 15px;*/
+/*для картинки устанавливаем неизменный размер
+через 00450px потом 
+max-widht img 100% -тогда от размера
+исходной картинки не зависим
+а текст справа разрешаем увелисиваться
+flex 11 auto*/
 
-	/*flex: 0 0 450px;*/
+.about__img{	
+  flex: 0 0 450px;
 }
 .about_img img{
-	width: 50%;
+	max-width: 100%;
 }
+
 .about__title{
 	margin: 0px 0px 35px 0px;
-	padding-left: 30px;
 	font-size: 40px;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
 	/*text-align: center;*/
@@ -260,7 +268,7 @@ ul,li{
 
 .about__text p{
 	margin:  0px 0px 15px 0px;
-	padding-left: 20px;
+	
 }
 .avout__text p:last-child{
 	margin: 0;
