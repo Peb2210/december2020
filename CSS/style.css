@@ -90,8 +90,11 @@ ul,li{
 }
 .container{
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 0px auto;
 }
+/*.content{
+	flex: 1 1 auto;
+}*/
 /*____ header___*/
 
 .header{
@@ -217,3 +220,75 @@ ul,li{
 	font-weight: 500;
 	color: white;
 }
+
+/*______about me______*/
+.about{
+	padding: 50px 0;	
+	background-color: #c7d4e4;
+}
+.about__row{
+	display: flex;	
+	justify-content: space-between;
+
+	/*margin: 0px -15px;*/
+}
+.about__body{
+	padding: 0px 0px 0px 20px;
+		/*margin: 0px -15px;*/
+}
+.about__img{
+	/*padding : 0px 15px;*/
+
+	/*flex: 0 0 450px;*/
+}
+.about_img img{
+	width: 50%;
+}
+.about__title{
+	margin: 0px 0px 35px 0px;
+	padding-left: 30px;
+	font-size: 40px;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+	/*text-align: center;*/
+	font-weight: bold;
+}
+
+.about__text{
+	font-size: 15px;
+	line-height: 24px;
+	}
+
+.about__text p{
+	margin:  0px 0px 15px 0px;
+	padding-left: 20px;
+}
+.avout__text p:last-child{
+	margin: 0;
+}
+
+
+/*_____tasks___*/
+.tasks {
+	background: #c7d4e4 ;
+	/*margin: 35px 0px 35px 0px;*/
+	padding: 20px 0px 20px 0px;
+}
+
+.tasks__title {
+margin: 5px 0px 35px 0px;
+font-size: 30px;
+text-align: center;
+font-weight: bold;
+}
+
+.tasks__list li {
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+	margin: 0px 0px 15px 0px;
+	padding: 0px 0px 0px 36px;
+	background: url('../IMG/icons/icon1.png') 0 1px no-repeat;
+	font-size: 20px;
+	line-height: 22px;
+}
+.tasks__list li:last-child{margin: 0;}
+
+
