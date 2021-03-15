@@ -258,7 +258,15 @@ flex 11 auto*/
 
 .about__title{
 	margin: 0px 0px 35px 0px;
-	font-size: 40px;
+	/*font-size: 40px;
+	24px - это минимальный размер читаемости на 320px
+	экране 16 = (размер по макету 40px-min размер 24px
+	100vw - ширина viewport 320px - это размер 5 айфона
+	важно в функции calc между  + - * / ставть пробелы
+	не рабоетает эта функция в IE11 для этого адаптация через
+	медиа запросы
+	*/
+	font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
 	/*text-align: center;*/
 	font-weight: bold;
